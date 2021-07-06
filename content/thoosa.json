@@ -1,0 +1,12 @@
+{
+  "title": "Thoosa 2",
+  "para1": "Thoosa is a competency management package developed by a small team of two software developers: Poseidon Software Solutions Ltd. In the summer of 2019, I was brought on to develop the client side for the web iteration of their project 'Thoosa 2'.",
+  "supplement": "<h1><code>/thoo&middot;sa/</code></h1><h3><code>a sea nymph from greek mythology</code></h3>",
+  "para2": "",
+  "stack": {
+    "front": ["HTML", "Javascript", "Vue"],
+    "back": ["C#", "ASP.NET"],
+    "db": ["MSSQL"]
+  },
+  "images": ["/images/thoosa/1.png", "/images/thoosa/2.png", "/images/thoosa/3.png"]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "iRISC",
+  "para1": "iRISC (interactive reduced instruction-set computer) is a web application currently in active development which allows users to write simple ARMv7 assembly language programs and interactively see the results of running the application.",
+  "supplement": "<h1><code>/eye&middot;risk/</code></h1><h3><code>interactive RISC architecture</code></h3>",
+  "stack": {
+    "front": ["HTML", "Typescript", "Vue"],
+    "back": [],
+    "db": []
+  }
+}

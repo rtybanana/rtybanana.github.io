@@ -1,0 +1,8 @@
+{
+  "title": "BrainBoard",
+  "para1": "BrainBoard is a visualisation dashboard for examining functional and structural MRI connectivity.",
+  "supplement": "<h1><code>/brain&middot;board/</code></h1><h3><code>brain visualisation dashboard</code></h3>",
+  "stack": {
+    "front": ["HTML", "Javascript", "Vue"]
+  }
+}

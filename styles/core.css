@@ -1,3 +1,56 @@
 html{
   overflow-x: hidden;
 }
+
+body {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+.top-angle-down {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-bottom: 15vw solid #1f151f;
+  border-right: 100vw solid transparent;
+}
+
+.top-angle-up {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-bottom: 15vw solid #1f151f;
+  border-left: 100vw solid transparent;
+}
+
+.bottom-angle-down {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-top: 15vw solid #1f151f;
+  border-left: 100vw solid transparent;
+}
+
+.bottom-angle-up {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-top: 15vw solid #1f151f;
+  border-right: 100vw solid transparent;
+}
+
+.fade-enter-active {
+  transition: all 1s ease;
+}
+.fade-enter, .fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.clickable {
+  cursor: pointer;
+}

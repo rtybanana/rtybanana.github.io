@@ -1,0 +1,12 @@
+{
+  "title": "Qunite",
+  "para1": "Qunite is a personal project of mine which has been in part time development since March 2020. It is a web application which allows you to create a single, shared Spotify queue and listen together with your friends on your own devices.",
+  "supplement": "<h1><code>/kew&middot;nite/</code></h1><h3><code>a portmanteau of queue and unite</code></h3>",
+  "para2": "Qunite represents a watershed moment for me as a software developer because it was the first project where I saw a problem that I wanted solved and then solved it myself using the skills I had. Not only was I able to solve my problem, but I also acquired new knowledge of DevOps, two-way websocket communications and API interfaces.",
+  "stack": {
+    "front": ["HTML", "Javascript", "Vue"],
+    "back": ["Node", "Express", "Socket.io"],
+    "db": ["MongoDB"]
+  },
+  "images": ["/images/qunite/1.png", "/images/qunite/2.png", "/images/qunite/3.png"]
+}
