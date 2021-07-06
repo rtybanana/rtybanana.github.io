@@ -30,17 +30,18 @@
 <body>
 
   <div id="app" v-cloak>
-    <b-navbar sticky>
-      <b-navbar-nav class="mx-auto">
-        <b-nav-item-dropdown text="Personal" ref="personal" v-b-hover="(state) => { navbarHover(state, 'personal'); }">
-          <b-dropdown-item href="#">FastFest</b-dropdown-item>
-          <b-dropdown-item href="https://qunite.app/">Qunite</b-dropdown-item>
-          <b-dropdown-item href="https://polysoftit.co.uk/brainboard/">BrainBoard</b-dropdown-item>
-          <b-dropdown-item href="https://polysoftit.co.uk/irisc-web/">iRISC</b-dropdown-item>
+    <b-navbar class="position-fixed w-100" style="z-index: 1;">
+      <b-navbar-nav class="mx-auto" style="background-color: white; border-radius: .5rem;">
+        <b-nav-item-dropdown text="Personal" ref="personal" v-b-hover="(state) => { navbarHover(state, 'personal'); }" menu-class="nav-dropdown">
+          <!-- <b-dropdown-item href="#">FastFest</b-dropdown-item> -->
+          <b-dropdown-item @click="fetchContent('qunite')">Qunite</b-dropdown-item>
+          <b-dropdown-item @click="fetchContent('brainboard')">BrainBoard</b-dropdown-item>
+          <b-dropdown-item @click="fetchContent('irisc')">iRISC</b-dropdown-item>
         </b-nav-item-dropdown>
 
-        <b-nav-item-dropdown text="Professional" ref="professional" v-b-hover="(state) => { navbarHover(state, 'professional'); }">
-          <b-dropdown-item href="#">Thoosa 2</b-dropdown-item>
+        <b-nav-item-dropdown text="Professional" ref="professional" v-b-hover="(state) => { navbarHover(state, 'professional'); }" menu-class="nav-dropdown">
+          <b-dropdown-item @click="fetchContent('thoosa')">Thoosa 2</b-dropdown-item>
+          <b-dropdown-item @click="fetchContent('thoosa-personal')">Thoosa Personal</b-dropdown-item>
           <b-dropdown-item href="#">Your Project Here?</b-dropdown-item>
         </b-nav-item-dropdown>
         
@@ -50,36 +51,79 @@
       </b-navbar-nav>
     </b-navbar>
 
-
-
-    <div class="container-fluid">
+    <div class="container-fluid position-relative">
       <div class="row">
         <div class="col-12 position-fixed">
           <div class="w-100" style="height: 350px;">
-            <img src="./images/banner.png" style="max-width: 100%; max-height: 350px; margin: auto; display: block;"/>
+            <img src="/images/banner.png" @click="fetchContent('home')" class="clickable" style="max-width: 100%; max-height: 350px; margin: auto; display: block; position: absolute; top: 0; bottom: 0; right: 0; left: 0;"/>
           </div>
         </div>
-        <div class="col-12 top-angle-down" style="margin-top: 275px"></div>
-        <div class="col-12" style="background-color: #1f151f; color: white; min-height: 100vh">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <h2>About Polysoft</h2>
-                We are a freelance/contract work business who perform software development services for a range of different requirements. 
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="row" style="z-index: 2;">
+        <div class="col-12 top-angle-down" style="margin-top: 280px"></div>
+        <div class="col-12" style="background-color: #1f151f; color: white; min-height: 60vh;">
+          <div class="container my-5 my-md-4">
+            <transition name="fade" mode="out-in">
+              <div class="row" :key="content.title">
+                <div class="col-lg-6 offset-lg-1">
+                  <h2>{{content.title}}</h2>
+                  {{content.para1}}
+                </div>
+
+                <div v-if="content.supplement" class="col-lg-6 offset-lg-5 mt-5 text-right" v-html="content.supplement"></div>
+
+                <div v-if="content.para2" class="col-lg-7 offset-lg-1 mt-5">
+                  {{content.para2}}
+                </div>
+
+                <div v-if="content.images" class="col-lg-10 offset-lg-1 mt-5">
+                  <h3>Gallery</h3>
+                  <b-carousel
+                    id="carousel-no-animation"
+                    style="text-shadow: 0px 0px 2px #000"
+                    controls
+                    indicators
+                    img-width="1920"
+                    img-height="1080"
+                  >
+                    <b-carousel-slide v-for="path in content.images" :img-src="path"></b-carousel-slide>
+
+                    <!-- <b-carousel-slide
+                      img-src="https://picsum.photos/1920/1080/?image=10"
+                    ></b-carousel-slide>
+                    <b-carousel-slide
+                      img-src="https://picsum.photos/1920/1080/?image=12"
+                    ></b-carousel-slide>
+                    <b-carousel-slide
+                      img-src="https://picsum.photos/1920/1080/?image=22"
+                    ></b-carousel-slide>
+                    <b-carousel-slide
+                      img-src="https://picsum.photos/1920/1080/?image=23"
+                    ></b-carousel-slide> -->
+                  </b-carousel>
+                </div>
+
+                <div v-if="content.stack" class="col-lg-6 offset-lg-5 mt-5 text-right">
+                  <h3>Tech Stack</h3>
+                  <div style="color:#3D9970 ;">[ {{content.stack.front.join(', ')}} ]</div>
+                  <div style="color:#FF4136;">[ {{content.stack.back ? content.stack.back.join(', ') : 'None'}} ]</div>
+                  <div style="color:#0074D9;">[ {{content.stack.db ? content.stack.db.join(', ') : 'None'}} ]</div>
+                </div>
               </div>
-              <div class="col-lg-6 offset-lg-6 mt-5 mt-lg-0 text-right">
-                <h1><code>/po&middot;ly&middot;soft/</code></h1>
-                <h4><code>a large quantity of software</code></h4>
-              </div>
-            </div>
+            </transition>
           </div>
         </div>
         <div class="col-12 bottom-angle-down"></div>
         <div class="col-12" style="margin-top: -5vw;">
           <div class="container">
             <div class="row">
-              <div class="col-12 pb-3">
+              <div class="col-lg-10 offset-lg-1 pb-3">
                 <h2>Contact</h2>
+                Rory Pinkney
                 <div>email: polysoftit@gmail.com</div>
                 <div>mobile: +44 7763 278830 </div>
               </div>
@@ -95,10 +139,29 @@
 
     var app = new Vue({
       el: '#app',
+      data: {
+        content: {}
+        
+      },
       methods: {
         navbarHover(state, name) {
           this.$refs[name].visible = state;
+        },
+        fetchContent(file) {
+          fetch(`/content/${file}.json`)
+            .then(response => response.json())
+            .then(data => {
+              this.content = data;
+            });
         }
+      },
+      created() {
+        this.fetchContent('home');
+        // history.pushState({page: 'home'}, 'home')
+
+        // window.onpopstate = (ev) => {
+        //   this.fetchContent(event.state.page);
+        // }
       }
     })
   </script>
@@ -106,40 +169,9 @@
 </body>
 
 <style>
-.top-angle-down {
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  border-bottom: 15vw solid #1f151f;
-  border-right: 100vw solid transparent;
-}
 
-.top-angle-up {
-  width: 0;
-  height: 0;
-  padding: 0;
+.nav-dropdown {
   margin: 0;
-  border-bottom: 15vw solid #1f151f;
-  border-left: 100vw solid transparent;
-}
-
-.bottom-angle-down {
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  border-top: 15vw solid #1f151f;
-  border-left: 100vw solid transparent;
-}
-
-.bottom-angle-up {
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  border-top: 15vw solid #1f151f;
-  border-right: 100vw solid transparent;
 }
 
 </style>
