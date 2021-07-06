@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>Polysoft IT</title>  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+  <link rel="manifest" href="public/site.webmanifest">
+  <link rel="mask-icon" href="public/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.css" />
+  <link rel="stylesheet" href="styles/core.css" />
+
+  <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+  <script src="https://unpkg.com/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-vue@2.21.2/dist/bootstrap-vue-icons.min.js"></script>
+  <script src="https://unpkg.com/http-vue-loader"></script>
+</head>
+
+<body>
+
+  <div id="app" v-cloak>
+    <b-navbar sticky>
+      <b-navbar-nav class="mx-auto">
+        <b-nav-item-dropdown text="Personal" ref="personal" v-b-hover="(state) => { navbarHover(state, 'personal'); }">
+          <b-dropdown-item href="#">FastFest</b-dropdown-item>
+          <b-dropdown-item href="https://qunite.app/">Qunite</b-dropdown-item>
+          <b-dropdown-item href="https://polysoftit.co.uk/brainboard/">BrainBoard</b-dropdown-item>
+          <b-dropdown-item href="https://polysoftit.co.uk/irisc-web/">iRISC</b-dropdown-item>
+        </b-nav-item-dropdown>
+
+        <b-nav-item-dropdown text="Professional" ref="professional" v-b-hover="(state) => { navbarHover(state, 'professional'); }">
+          <b-dropdown-item href="#">Thoosa 2</b-dropdown-item>
+          <b-dropdown-item href="#">Your Project Here?</b-dropdown-item>
+        </b-nav-item-dropdown>
+        
+        <!-- <b-nav-item href="https://polysoftit.co.uk/portfolio/">Portfolio</b-nav-item> -->
+        <b-nav-item href="#">Contact</b-nav-item>
+
+      </b-navbar-nav>
+    </b-navbar>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 position-fixed">
+          <div class="w-100" style="height: 350px;">
+            <img src="./images/banner.png" style="max-width: 100%; max-height: 350px; margin: auto; display: block;"/>
+          </div>
+        </div>
+        <div class="col-12 top-angle-down" style="margin-top: 275px"></div>
+        <div class="col-12" style="background-color: #1f151f; color: white; min-height: 100vh">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <h2>About Polysoft</h2>
+                We are a freelance/contract work business who perform software development services for a range of different requirements. 
+              </div>
+              <div class="col-lg-6 offset-lg-6 mt-5 mt-lg-0 text-right">
+                <h1><code>/po&middot;ly&middot;soft/</code></h1>
+                <h4><code>a large quantity of software</code></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 bottom-angle-down"></div>
+        <div class="col-12" style="margin-top: -5vw;">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 pb-3">
+                <h2>Contact</h2>
+                <div>email: polysoftit@gmail.com</div>
+                <div>mobile: +44 7763 278830 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loader = window.httpVueLoader;
+
+    var app = new Vue({
+      el: '#app',
+      methods: {
+        navbarHover(state, name) {
+          this.$refs[name].visible = state;
+        }
+      }
+    })
+  </script>
+
+</body>
+
+<style>
+.top-angle-down {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-bottom: 15vw solid #1f151f;
+  border-right: 100vw solid transparent;
+}
+
+.top-angle-up {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-bottom: 15vw solid #1f151f;
+  border-left: 100vw solid transparent;
+}
+
+.bottom-angle-down {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-top: 15vw solid #1f151f;
+  border-left: 100vw solid transparent;
+}
+
+.bottom-angle-up {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border-top: 15vw solid #1f151f;
+  border-right: 100vw solid transparent;
+}
+
+</style>
+</html>
+
