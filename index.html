@@ -30,7 +30,7 @@
 <body>
 
   <div id="app" v-cloak>
-    <b-navbar class="position-fixed w-100" style="z-index: 1;">
+    <b-navbar sticky style="z-index: 1;">
       <b-navbar-nav class="mx-auto" style="background-color: white; border-radius: .5rem;">
         <b-nav-item-dropdown text="Personal" ref="personal" v-b-hover="(state) => { navbarHover(state, 'personal'); }" menu-class="nav-dropdown">
           <!-- <b-dropdown-item href="#">FastFest</b-dropdown-item> -->
@@ -42,7 +42,7 @@
         <b-nav-item-dropdown text="Professional" ref="professional" v-b-hover="(state) => { navbarHover(state, 'professional'); }" menu-class="nav-dropdown">
           <b-dropdown-item @click="fetchContent('thoosa')">Thoosa 2</b-dropdown-item>
           <b-dropdown-item @click="fetchContent('thoosa-personal')">Thoosa Personal</b-dropdown-item>
-          <b-dropdown-item href="#">Your Project Here?</b-dropdown-item>
+          <b-dropdown-item @click="fetchContent('your-project')">Your Project?</b-dropdown-item>
         </b-nav-item-dropdown>
         
         <!-- <b-nav-item href="https://polysoftit.co.uk/portfolio/">Portfolio</b-nav-item> -->
@@ -66,15 +66,24 @@
       <div class="row" style="z-index: 2;">
         <div class="col-12 top-angle-down" style="margin-top: 280px"></div>
         <div class="col-12" style="background-color: #1f151f; color: white; min-height: 60vh;">
-          <div class="container my-5 my-md-4">
+          <div class="container my-3">
             <transition name="fade" mode="out-in">
               <div class="row" :key="content.title">
-                <div class="col-lg-6 offset-lg-1">
-                  <h2>{{content.title}}</h2>
-                  {{content.para1}}
+                <div class="col-lg-7 offset-lg-1">
+                  <h2 style="display: inline-block;">{{content.title}}</h2>
+                  
+                  <span class="ml-2">
+                    <b-icon v-if="content.git" @click="followLink(content.git)" class="clickable" icon="github" scale="1.25" style="margin-bottom: 2px;"></b-icon>
+                    <b-icon v-if="content.link" @click="followLink(content.link)" class="clickable" icon="arrow-up-right-square-fill" scale="1.25" style="margin-bottom: 2px;"></b-icon>
+                  </span>
+                  
+                  <div>
+                    {{content.para1}}
+                  </div>
+                  
                 </div>
 
-                <div v-if="content.supplement" class="col-lg-6 offset-lg-5 mt-5 text-right" v-html="content.supplement"></div>
+                <div v-if="content.supplement" class="col-lg-7 offset-lg-4 mt-5 text-right" v-html="content.supplement"></div>
 
                 <div v-if="content.para2" class="col-lg-7 offset-lg-1 mt-5">
                   {{content.para2}}
@@ -83,7 +92,6 @@
                 <div v-if="content.images" class="col-lg-10 offset-lg-1 mt-5">
                   <h3>Gallery</h3>
                   <b-carousel
-                    id="carousel-no-animation"
                     style="text-shadow: 0px 0px 2px #000"
                     controls
                     indicators
@@ -117,15 +125,19 @@
             </transition>
           </div>
         </div>
-        <div class="col-12 bottom-angle-down"></div>
-        <div class="col-12" style="margin-top: -5vw;">
+        <div class="col-12 bottom-angle-down" style="z-index: 1;"></div>
+        <div class="col-12" style="background-color: white;">
           <div class="container">
             <div class="row">
-              <div class="col-lg-10 offset-lg-1 pb-3">
+              <div class="col-lg-10 offset-lg-1 mb-4">
                 <h2>Contact</h2>
                 Rory Pinkney
                 <div>email: polysoftit@gmail.com</div>
                 <div>mobile: +44 7763 278830 </div>
+                <div class="ml-1 mt-2">
+                  <b-icon @click="followLink('https://github.com/rtybanana/')" class="clickable mr-1" icon="github" scale="1.5"></b-icon>
+                  <b-icon @click="followLink('https://www.linkedin.com/in/rtybanana/')" class="clickable" icon="linkedin" scale="1.5"></b-icon>
+                </div>
               </div>
             </div>
           </div>
@@ -153,6 +165,9 @@
             .then(data => {
               this.content = data;
             });
+        },
+        followLink(link) {
+          window.location.href = link;
         }
       },
       created() {

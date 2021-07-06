@@ -30,7 +30,7 @@ body {
   padding: 0;
   margin: 0;
   border-top: 15vw solid #1f151f;
-  border-left: 100vw solid transparent;
+  border-left: 100vw solid white;
 }
 
 .bottom-angle-up {

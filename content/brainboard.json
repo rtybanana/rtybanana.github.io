@@ -1,8 +1,12 @@
 {
   "title": "BrainBoard",
-  "para1": "BrainBoard is a visualisation dashboard for examining functional and structural MRI connectivity.",
+  "git": "https://github.com/rtybanana/brainboard/",
+  "link": "https://polysoftit.co.uk/brainboard/",
+  "para1": "BrainBoard is a visualisation dashboard for examining functional and structural MRI connectivity. The idea is to demystify the visualisation of brain connectivity by separating the complex, multi-dimensional information into three simple, mutually interactive plots.",
   "supplement": "<h1><code>/brain&middot;board/</code></h1><h3><code>brain visualisation dashboard</code></h3>",
+  "para2": "Here, 'Mutual interactivity' means that the when one of the plots is interacted with to see specific information about some region or connection, information pertaining to the same target is simultaneously highlighted in the other plots.",
   "stack": {
     "front": ["HTML", "Javascript", "Vue"]
-  }
+  },
+  "images": ["/images/brainboard/1.png"]
 }
