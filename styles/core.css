@@ -54,3 +54,7 @@ body {
 .clickable {
   cursor: pointer;
 }
+
+.carousel-inner {
+  border-radius: 0.5rem;
+}
