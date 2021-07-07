@@ -45,8 +45,7 @@
           <b-dropdown-item @click="fetchContent('your-project')">Your Project?</b-dropdown-item>
         </b-nav-item-dropdown>
         
-        <!-- <b-nav-item href="https://polysoftit.co.uk/portfolio/">Portfolio</b-nav-item> -->
-        <b-nav-item href="#">Contact</b-nav-item>
+        <b-nav-item @click="scrollTo($refs.contact)">Contact</b-nav-item>
 
       </b-navbar-nav>
     </b-navbar>
@@ -73,8 +72,8 @@
                   <h2 style="display: inline-block;">{{content.title}}</h2>
                   
                   <span class="ml-2">
-                    <b-icon v-if="content.git" @click="followLink(content.git)" class="clickable" icon="github" scale="1.25" style="margin-bottom: 2px;"></b-icon>
                     <b-icon v-if="content.link" @click="followLink(content.link)" class="clickable" icon="arrow-up-right-square-fill" scale="1.25" style="margin-bottom: 2px;"></b-icon>
+                    <b-icon v-if="content.git" @click="followLink(content.git)" class="clickable" icon="github" scale="1.25" style="margin-bottom: 2px;"></b-icon>
                   </span>
                   
                   <div>
@@ -91,27 +90,12 @@
 
                 <div v-if="content.images" class="col-lg-10 offset-lg-1 mt-5">
                   <h3>Gallery</h3>
-                  <b-carousel
-                    style="text-shadow: 0px 0px 2px #000"
-                    controls
-                    indicators
-                    img-width="1920"
-                    img-height="1080"
-                  >
+                  <b-carousel style="text-shadow: 0px 0px 2px #000"
+                              controls
+                              indicators
+                              img-width="1920"
+                              img-height="1080">
                     <b-carousel-slide v-for="path in content.images" :img-src="path"></b-carousel-slide>
-
-                    <!-- <b-carousel-slide
-                      img-src="https://picsum.photos/1920/1080/?image=10"
-                    ></b-carousel-slide>
-                    <b-carousel-slide
-                      img-src="https://picsum.photos/1920/1080/?image=12"
-                    ></b-carousel-slide>
-                    <b-carousel-slide
-                      img-src="https://picsum.photos/1920/1080/?image=22"
-                    ></b-carousel-slide>
-                    <b-carousel-slide
-                      img-src="https://picsum.photos/1920/1080/?image=23"
-                    ></b-carousel-slide> -->
                   </b-carousel>
                 </div>
 
@@ -129,7 +113,7 @@
         <div class="col-12" style="background-color: white;">
           <div class="container">
             <div class="row">
-              <div class="col-lg-10 offset-lg-1 mb-4">
+              <div ref="contact" class="col-lg-10 offset-lg-1 mb-4">
                 <h2>Contact</h2>
                 Rory Pinkney
                 <div>email: polysoftit@gmail.com</div>
@@ -168,15 +152,13 @@
         },
         followLink(link) {
           window.location.href = link;
+        },
+        scrollTo(ref) {
+          ref.scrollIntoView({behavior: 'smooth'});
         }
       },
       created() {
         this.fetchContent('home');
-        // history.pushState({page: 'home'}, 'home')
-
-        // window.onpopstate = (ev) => {
-        //   this.fetchContent(event.state.page);
-        // }
       }
     })
   </script>
