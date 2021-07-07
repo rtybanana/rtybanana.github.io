@@ -30,7 +30,7 @@
 <body>
 
   <div id="app" v-cloak>
-    <b-navbar sticky style="z-index: 1;">
+    <b-navbar class="position-fixed w-100" style="z-index: 1;">
       <b-navbar-nav class="mx-auto" style="background-color: white; border-radius: .5rem;">
         <b-nav-item-dropdown text="Personal" ref="personal" v-b-hover="(state) => { navbarHover(state, 'personal'); }" menu-class="nav-dropdown">
           <!-- <b-dropdown-item href="#">FastFest</b-dropdown-item> -->
