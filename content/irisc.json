@@ -2,10 +2,11 @@
   "title": "iRISC",
   "git": "https://github.com/rtybanana/irisc-web/",
   "link": "https://polysoftit.co.uk/irisc-web/",
-  "para1": "iRISC (interactive reduced instruction-set computer) is a web application currently in active development which allows users to write simple ARMv7 assembly language programs and interactively see the results of running the application.",
+  "para1": "iRISC (interactive reduced instruction-set computer) is a web application which allows users to write simple ARMv7 assembly language programs and interactively see the results of running their code on a simulated set of CPU registers and memory.",
   "supplement": "<h1><code>/eye&middot;risk/</code></h1><h3><code>interactive RISC architecture</code></h3>",
   "para2": "The web version of iRISC is still under active development and is in an incomplete state; however a more feature complete desktop version is available if you can be bothered to compile the C++ binaries.",
   "stack": {
-    "front": ["HTML", "Typescript", "Vue"]
+    "front": ["Vue", "Bootstrap"],
+    "os": ["Windows", "Typescript"]
   }
 }

@@ -2,6 +2,15 @@
   "title": "Polysoft",
   "para1": "Polysoft is a freelance/contract work business which performs software development services to a range of different requirements. For examples of work both completed and in active development, please see the personal and professional menu items.",
   "supplement": "<h1><code>/po&middot;ly&middot;soft/</code></h1><h3><code>a large quantity of software</code></h3>",
-  "para2": "As a software engineer, I am always trying to expand my horizons and learn new and better technologies to help me solve my problems. I would not label myself a designer; however, what I am is a perfectionist and I always strive to make my projects look and feel well-designed.",
+  "para2": "As a full stack software engineer, I am always trying to expand my horizons and learn new and better technologies to help me solve my problems. I would not label myself a UX/UI designer; however, what I am is a perfectionist and I always strive to make my projects look and feel well-designed.",
+  "stack": {
+    "title": "Stack Experience",
+    "front": ["Vue", "Bootstrap", "Material", "Flutter", "FLTK"],
+    "back": ["Node", "Express", "Django", ".NET"],
+    "db": ["MongoDB", "PostgresSQL", "SQLite"],
+    "server": ["DigitalOcean", "Heroku", "Nginx", "PM2"],
+    "os": ["C",  "C++", "C#", "Java", "Dart", "Javascript", "Typescript", "Python", "Windows", "Linux", "macOS"],
+    "para": "(<span class=\"text-g\">Front-end</span>, <span class=\"text-r\">back-end</span>, <span class=\"text-o\">database</span>, <span class=\"text-y\">server</span>, <span class=\"text-b\">OS and languages</span>)"
+  },
   "images": ["/images/qunite/1.png", "/images/thoosa/1.png", "/images/brainboard/1.png"]
 }

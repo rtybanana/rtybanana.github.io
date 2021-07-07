@@ -1,11 +1,13 @@
 {
   "title": "Thoosa Personal",
   "para1": "Thoosa Personal is a mobile companion app for the Thoosa competency managment system ",
-  "supplement": "<h1><code>/thoo&middot;sa/</code></h1><h3><code>a sea nymph from greek mythology</code></h3>",
+  "supplement": "<h1><code>/per&middot;so&middot;nal/</code></h1><h3><code></code></h3>",
   "para2": "",
   "stack": {
     "front": ["Dart", "Flutter"],
-    "back": ["ASP.NET"],
-    "db": ["MSSQL"]
+    "back": [".NET", "LINQ"],
+    "db": ["MSSQL"],
+    "server": ["Microsoft Azure"],
+    "os": ["Windows", "C#", "Javascript"]
   }
 }

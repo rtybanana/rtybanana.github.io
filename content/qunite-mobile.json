@@ -1,12 +1,14 @@
 {
   "title": "Qunite Mobile",
-  "para1": "Qunite is a personal project of mine which has been in part time development since March 2020. It is a web application which allows you to create a single, shared Spotify queue and listen together with your friends on your own devices.",
-  "supplement": "<h1><code>/kew&middot;nite/</code></h1><h3><code>a portmanteau of queue and unite</code></h3>",
-  "para2": "Qunite represents a watershed moment for me as a software developer because it was the first project where I saw a problem that I wanted solved and then solved it myself using the skills I had. Not only was I able to solve my problem, but I also acquired new knowledge of DevOps, two-way websocket communications and API interfaces.",
+  "para1": "Qunite was initially designed as a progressive full screen web application; however, the mobile experience left a little to be desired due to backgrounding limitations in Safari. Enter Qunite Mobile, an opportunity for me to solve my new mobile UX problem and expand my experience to into iOS and Android development. Qunite Mobile is currently under development using Flutter and Dart in a macOS environment.",
+  "supplement": "<h1><code>/mo&middot;bile/</code></h1><h3><code>a convenient portable computer</code></h3>",
+  "para2": "",
   "stack": {
-    "front": ["Dart", "Flutter"],
+    "front": ["Flutter", "Material"],
     "back": ["Node", "Express"],
-    "db": ["MongoDB"]
+    "db": ["MongoDB"],
+    "server": ["DigitalOcean", "Nginx", "PM2"],
+    "os": ["macOS", "Linux", "iOS", "Android", "Javascript", "Dart"]
   },
   "images": ["/images/qunite/1.png", "/images/qunite/2.png", "/images/qunite/3.png"]
 }

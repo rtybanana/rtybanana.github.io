@@ -6,6 +6,28 @@ body {
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
+/* colors */
+.text-g {
+  color: #3D9970;
+}
+
+.text-r {
+  color: #FF4136;
+}
+
+.text-o {
+  color: #FF851B;
+}
+
+.text-y {
+  color: #FFDC00;
+}
+
+.text-b {
+  color: #0074D9;
+}
+
+/* angled divs */
 .top-angle-down {
   width: 0;
   height: 0;

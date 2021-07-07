@@ -2,11 +2,13 @@
   "title": "Thoosa 2",
   "para1": "Thoosa is a competency management package developed by a small team of two software developers: Poseidon Software Solutions Ltd. In the summer of 2019, I was brought on as the sole front-end developer for the web iteration of their project 'Thoosa 2'. Although my responsibilties mostly involved client-side design and development; I also helped out with the database and back-end design as well.",
   "supplement": "<h1><code>/thoo&middot;sa/</code></h1><h3><code>a sea nymph from greek mythology</code></h3>",
-  "para2": "",
+  "para2": "Designed to assist organisations in keeping track of their staff competencies, the Thoosa 2 web interface is built to be equal parts intuitive and powerful. It is designed to look and feel like a native application desite running in a web client.",
   "stack": {
-    "front": ["HTML", "Javascript", "Vue"],
-    "back": ["C#", "ASP.NET"],
-    "db": ["MSSQL"]
+    "front": ["Vue", "Bootstrap", "Apexcharts"],
+    "back": [".NET", "LINQ"],
+    "db": ["MSSQL"],
+    "server": ["Microsoft Azure"],
+    "os": ["Windows", "C#", "Javascript"]
   },
   "images": ["/images/thoosa/1.png", "/images/thoosa/2.png", "/images/thoosa/3.png"]
 }
