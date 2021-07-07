@@ -35,6 +35,7 @@
         <b-nav-item-dropdown text="Personal" ref="personal" v-b-hover="(state) => { navbarHover(state, 'personal'); }" menu-class="nav-dropdown">
           <!-- <b-dropdown-item href="#">FastFest</b-dropdown-item> -->
           <b-dropdown-item @click="fetchContent('qunite')">Qunite</b-dropdown-item>
+          <b-dropdown-item @click="fetchContent('qunite-mobile')">Qunite Mobile</b-dropdown-item>
           <b-dropdown-item @click="fetchContent('brainboard')">BrainBoard</b-dropdown-item>
           <b-dropdown-item @click="fetchContent('irisc')">iRISC</b-dropdown-item>
         </b-nav-item-dropdown>
