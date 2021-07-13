@@ -12,5 +12,5 @@
     "os": ["C",  "C++", "C#", "Java", "Dart", "Javascript", "Typescript", "Python", "Windows", "Linux", "macOS"],
     "para": "(<span class=\"text-g\">Front-end</span>, <span class=\"text-r\">back-end</span>, <span class=\"text-o\">database</span>, <span class=\"text-y\">server</span>, <span class=\"text-b\">OS and languages</span>)"
   },
-  "images": ["/images/qunite/1.png", "/images/thoosa/1.png", "/images/brainboard/1.png"]
+  "images": ["/images/qunite/1.png", "/images/thoosa/1.png", "/images/brainboard/1.png", "/images/irisc/1.png"]
 }

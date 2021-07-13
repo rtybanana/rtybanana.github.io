@@ -8,5 +8,6 @@
   "stack": {
     "front": ["Vue", "Bootstrap"],
     "os": ["Windows", "Typescript"]
-  }
+  },
+  "images": ["/images/irisc/1.png"]
 }
