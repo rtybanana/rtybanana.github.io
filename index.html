@@ -50,14 +50,18 @@
   <div id="app" v-cloak>
     <b-navbar class="position-fixed w-100" style="z-index: 1;">
       <b-navbar-nav class="mx-auto" style="background-color: white; border-radius: .5rem;">
-        <b-nav-item-dropdown text="Personal" ref="personal" v-b-hover="(state) => { navbarHover(state, 'personal'); }" menu-class="nav-dropdown">
+        <!-- <b-nav-item @click="fetchContent('home')">Home</b-nav-item> -->
+
+        <!-- v-b-hover="(state) => { navbarHover(state, 'personal'); }" -->
+        <b-nav-item-dropdown text="Personal" ref="personal" menu-class="nav-dropdown">
           <b-dropdown-item @click="fetchContent('qunite')">Qunite</b-dropdown-item>
           <b-dropdown-item @click="fetchContent('qunite-mobile')">Qunite Mobile</b-dropdown-item>
           <b-dropdown-item @click="fetchContent('brainboard')">BrainBoard</b-dropdown-item>
           <b-dropdown-item @click="fetchContent('irisc')">iRISC</b-dropdown-item>
         </b-nav-item-dropdown>
-
-        <b-nav-item-dropdown text="Professional" ref="professional" v-b-hover="(state) => { navbarHover(state, 'professional'); }" menu-class="nav-dropdown">
+        
+        <!-- v-b-hover="(state) => { navbarHover(state, 'professional'); }" -->
+        <b-nav-item-dropdown text="Professional" ref="professional" menu-class="nav-dropdown">
           <b-dropdown-item @click="fetchContent('thoosa')">Thoosa 2</b-dropdown-item>
           <b-dropdown-item @click="fetchContent('thoosa-personal')">Thoosa Personal</b-dropdown-item>
           <b-dropdown-item @click="fetchContent('your-project')">Your Project?</b-dropdown-item>
@@ -158,7 +162,6 @@
       el: '#app',
       data: {
         content: {}
-        
       },
       methods: {
         navbarHover(state, name) {
