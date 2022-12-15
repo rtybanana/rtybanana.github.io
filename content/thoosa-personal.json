@@ -1,13 +1,14 @@
 {
   "title": "Thoosa Personal",
-  "para1": "Thoosa Personal is a mobile companion app for the Thoosa competency managment system ",
+  "link": "https://apps.apple.com/gb/app/thoosa-personal/id1592309493",
+  "para1": "Thoosa Personal is a mobile companion app for the Thoosa competency managment system. Whereas the Thoosa management software is built for use within the client organisation's administator team, the mobile companion app is for use by employees of the organisation to manage their own competencies.",
   "supplement": "<h1><code>/per&middot;so&middot;nal/</code></h1><h3><code></code></h3>",
-  "para2": "",
+  "para2": "Built using Flutter and Dart, the Thoosa companion app is available for download on the <a href=\"https://apps.apple.com/gb/app/thoosa-personal/id1592309493\">App Store</a> and <a href=\"https://play.google.com/store/apps/details?id=com.pssl.thoosa\">Google Play</a>. Though you won't find it particularly useful unless you're already part of an organisation using <a href=\"https://www.thoosa.co.uk/\">Thoosa</a>!",
   "stack": {
-    "front": ["Dart", "Flutter"],
+    "front": ["Flutter", "Material"],
     "back": [".NET", "LINQ"],
     "db": ["MSSQL"],
     "server": ["Microsoft Azure"],
-    "os": ["Windows", "C#", "Javascript"]
+    "os": ["macOS", "Windows", "iOS", "Android", "C#", "Dart"]
   }
 }

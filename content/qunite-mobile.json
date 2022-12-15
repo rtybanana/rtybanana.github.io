@@ -1,14 +1,15 @@
 {
   "title": "Qunite Mobile",
-  "para1": "Qunite was initially designed as a progressive full screen web application; however, the mobile experience left a little to be desired due to backgrounding limitations in Safari. Enter Qunite Mobile, an opportunity for me to solve my new mobile UX problem and expand my experience to into iOS and Android development. Qunite Mobile is currently under development using Flutter and Dart in a macOS environment.",
+  "link": "https://apps.apple.com/gb/app/qunite/id1625349140",
+  "para1": "Qunite was initially designed as a progressive full screen web application; however, the mobile experience left a little to be desired due to backgrounding limitations in Safari. Enter Qunite Mobile, an opportunity for me to solve my new mobile UX problem and expand my experience to into iOS and Android development.",
   "supplement": "<h1><code>/mo&middot;bile/</code></h1><h3><code>a convenient portable computer</code></h3>",
-  "para2": "",
+  "para2": "Qunite Mobile is now available on the <a href=\"https://apps.apple.com/gb/app/qunite/id1625349140\">App Store</a> and <a href=\"https://play.google.com/store/apps/details?id=com.polysoftit.qunite\">Google Play</a>!",
   "stack": {
     "front": ["Flutter", "Material"],
     "back": ["Node", "Express"],
     "db": ["MongoDB"],
     "server": ["DigitalOcean", "Nginx", "PM2"],
-    "os": ["macOS", "Linux", "iOS", "Android", "Javascript", "Dart"]
+    "os": ["macOS", "Linux", "iOS", "Android", "Typescript", "Dart"]
   },
   "images": ["/images/qunite/1.png", "/images/qunite/2.png", "/images/qunite/3.png"]
 }

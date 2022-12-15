@@ -7,7 +7,7 @@
     "title": "Stack Experience",
     "front": ["Vue", "Bootstrap", "Material", "Flutter", "FLTK"],
     "back": ["Node", "Express", "Django", ".NET"],
-    "db": ["MongoDB", "PostgresSQL", "SQLite"],
+    "db": ["MongoDB", "PostgresSQL", "SQLite", "MSSQL"],
     "server": ["DigitalOcean", "Heroku", "Nginx", "PM2"],
     "os": ["C",  "C++", "C#", "Java", "Dart", "Javascript", "Typescript", "Python", "Windows", "Linux", "macOS"],
     "para": "(<span class=\"text-g\">Front-end</span>, <span class=\"text-r\">back-end</span>, <span class=\"text-o\">database</span>, <span class=\"text-y\">server</span>, <span class=\"text-b\">OS and languages</span>)"

@@ -2,5 +2,13 @@
   "title": "Your Project?",
   "para1": "If you are looking to hire a versatile, capable and motivated software developer for freelance, contract or more long-term employment please do not hesitate to contact me. I am open to any and all work offers.",
   "supplement": "<h1><code>/yor&middot;pro&middot;ject/</code></h1><h3><code>some work you need help with</code></h3>",
-  "para2": "For personal and professional examples of my work you may browse this website. For all personal projects (including this website), both the design and implementation are solely my own work."
+  "para2": "For personal and professional examples of my work you may browse this website. For all personal projects (including this website), both the design and implementation are solely my own work.",
+  "stack": {
+    "title": "What do you need?",
+    "front": ["Vue", "Bootstrap", "Material", "Flutter", "...", "Whatever\u00a0you\u00a0need"],
+    "back": ["Node", "Express", "Django", ".NET", "...", "Whatever\u00a0you\u00a0need"],
+    "db": ["MongoDB", "PostgresSQL", "MSSQL", "...", "Whatever\u00a0you\u00a0need"],
+    "server": ["DigitalOcean", "Heroku", "Nginx", "PM2", "...", "Whatever\u00a0you\u00a0need"],
+    "os": ["C", "C#", "Java", "Dart", "Typescript", "...", "Whatever\u00a0you\u00a0need"]
+  }
 }

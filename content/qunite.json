@@ -7,9 +7,9 @@
   "stack": {
     "front": ["Vue", "Bootstrap"],
     "back": ["Node", "Express"],
-    "db": ["MongoDB"],
+    "db": ["MongoDB", "Mongoose"],
     "server": ["DigitalOcean", "Nginx", "PM2"],
-    "os": ["Windows", "Linux", "Javascript"]
+    "os": ["Windows", "Linux", "Typescript"]
   },
   "images": ["/images/qunite/1.png", "/images/qunite/2.png", "/images/qunite/3.png"]
 }
