@@ -167,6 +167,7 @@
         navbarHover(state, name) {
           this.$refs[name].visible = state;
         },
+        
         fetchContent(file) {
           fetch(`/content/${file}.json`)
             .then(response => response.json())
@@ -177,11 +178,12 @@
               }).bind(this), 10);
               
             });
-          
         },
+        
         followLink(link) {
           window.location.href = link;
         },
+        
         scrollTo(ref) {
           ref.scrollIntoView({behavior: 'smooth'});
         }
@@ -193,7 +195,7 @@
             this.content = data;
           });
       }
-    })
+    });
   </script>
 
 </body>
